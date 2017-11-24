@@ -82,6 +82,10 @@ Agent:
           Image: jenkinsci/jnlp-slave:2.62
           RequestCpu: "100m"
           RequestMemory: "128Mi"
+        Clients:
+          Image: fabric8/builder-clients:latest
+          RequestCpu: "100m"
+          RequestMemory: "128Mi"
         Maven:
           Image: fabric8/maven-builder:vd81dedb
           Privileged: true
@@ -99,6 +103,10 @@ Agent:
       Containers:
         Agent:
           Image: jenkinsci/jnlp-slave:2.62
+          RequestCpu: "100m"
+          RequestMemory: "128Mi"
+        Clients:
+          Image: fabric8/builder-clients:latest
           RequestCpu: "100m"
           RequestMemory: "128Mi"
         Node:
